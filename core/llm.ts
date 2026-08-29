@@ -46,7 +46,8 @@ export async function generate(
         Authorization: `Bearer ${key}`
       },
       body: JSON.stringify({
-        model: demo.model,
+        // LLM_MODEL_OVERRIDE:现场救急用,一个环境变量全场换模型(见 docs/HOW-TO-TWEAK.md)
+        model: process.env.LLM_MODEL_OVERRIDE || demo.model,
         messages: [{ role: "system", content: act.system }, userMessage],
         max_tokens: demo.maxTokens ?? 800,
         temperature: demo.temperature ?? 0.7
