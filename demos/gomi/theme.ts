@@ -15,9 +15,4 @@ export const theme = {
     border: "4px solid #ffffff",
     boxShadow: "0 0 0 4px #000000"
   } as CSSProperties,
-  bpVars: {
-    "--bp-bg": "#000000",
-    "--bp-fg": "#ffffff",
-    "--bp-accent": "#f8b800"
-  } as CSSProperties
 };

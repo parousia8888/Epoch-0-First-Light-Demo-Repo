@@ -10,7 +10,6 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { theme } from "@/demos/taishoku/theme";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "taishoku")!;
@@ -112,7 +111,7 @@ export default function Page() {
   const sections = text ? splitSections(text) : null;
 
   return (
-    <main className={`min-h-dvh px-5 pt-10 pb-8 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-5 pt-10 pb-8 ${theme.page} ${theme.font}`}>
       {/* ── 开场黑幕 ── */}
       {!introDone && (
         <div
@@ -292,7 +291,6 @@ export default function Page() {
           🔒 解雇された場合はこちら(未対応)
         </button>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

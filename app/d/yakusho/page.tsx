@@ -9,7 +9,6 @@
 import { useState } from "react";
 import { ImageDrop } from "@/core/ImageDrop";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { theme } from "@/demos/yakusho/theme";
 import { demos } from "@/demos-material";
 
@@ -54,7 +53,7 @@ export default function Page() {
   const parsed = text ? parseCard(text) : null;
 
   return (
-    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`}>
       {/* 受理印:盖章落下的一次性动画(CSS 过渡,不用 GSAP) */}
       <style>{`
         @keyframes yakusho-stamp {
@@ -187,7 +186,6 @@ export default function Page() {
           </div>
         </section>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

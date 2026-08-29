@@ -10,7 +10,6 @@ import { useState } from "react";
 import { TAGS } from "@/demos/joho/config";
 import { theme } from "@/demos/joho/theme";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "joho")!;
@@ -63,7 +62,7 @@ export default function Page() {
   const cards = text ? parseBrief(text) : null;
 
   return (
-    <main className={`min-h-dvh px-4 pt-6 pb-8 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-6 pb-8 ${theme.page} ${theme.font}`}>
       <style>{`
         @keyframes joho-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
         .joho-cursor {
@@ -232,7 +231,6 @@ export default function Page() {
           </div>
         </section>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

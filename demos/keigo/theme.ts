@@ -3,7 +3,6 @@
 // 档位:gsap。和纸信笺:米白生成色纸底 + 墨黑明朝体 + 朱红点缀。
 // 【纪律】朱红只做「朱笔」强调,不要拿来大面积铺色;简约克制。
 // ============================================================
-import type { CSSProperties } from "react";
 
 export const theme = {
   page: "bg-[#f5f0e4] text-[#221f1a]",
@@ -14,9 +13,4 @@ export const theme = {
   ink: "#221f1a",
   /** 信笺纸色(比页面底更白一档) */
   paper: "#fbf8ef",
-  bpVars: {
-    "--bp-bg": "#fbf8ef",
-    "--bp-fg": "#221f1a",
-    "--bp-accent": "#b3341f"
-  } as CSSProperties
 };

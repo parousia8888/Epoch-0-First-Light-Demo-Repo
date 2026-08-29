@@ -9,7 +9,6 @@
 import { useState } from "react";
 import { theme } from "@/demos/postmortem/theme";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "postmortem")!;
@@ -72,7 +71,7 @@ export default function Page() {
   const lineStep = 0.3; // 每行打印间隔(秒)
 
   return (
-    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`}>
       {/* 报告逐行打字机:clip-path steps 从左往右揭开,换行也不崩 */}
       <style>{`
         @keyframes pm-type {
@@ -208,7 +207,6 @@ export default function Page() {
           </div>
         </div>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

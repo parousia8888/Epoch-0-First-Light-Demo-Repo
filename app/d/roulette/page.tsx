@@ -11,7 +11,6 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { SHOPS, type Shop } from "@/demos/roulette/data";
 import { theme } from "@/demos/roulette/theme";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "roulette")!;
@@ -117,7 +116,7 @@ export default function Page() {
   }, []);
 
   return (
-    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`}>
       <div className="max-w-md mx-auto">
         {/* 世界观容器:霓虹招牌头 + 装饰静音开关 */}
         <header className="mb-6 text-center relative">
@@ -308,7 +307,6 @@ export default function Page() {
           </button>
         </div>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

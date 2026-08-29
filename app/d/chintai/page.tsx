@@ -9,7 +9,6 @@
 import { useState } from "react";
 import { theme } from "@/demos/chintai/theme";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "chintai")!;
@@ -78,7 +77,7 @@ export default function Page() {
   const parsed = text ? parseResult(text) : null;
 
   return (
-    <main className={`min-h-dvh px-3 pt-6 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-3 pt-6 pb-6 ${theme.page} ${theme.font}`}>
       <div className="max-w-md mx-auto">
         {/* 传单头:红底大字 + 贴纸 */}
         <div className="border-4 border-black bg-[#dd0000] text-white px-3 py-3 relative">
@@ -190,7 +189,6 @@ export default function Page() {
           </div>
         )}
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

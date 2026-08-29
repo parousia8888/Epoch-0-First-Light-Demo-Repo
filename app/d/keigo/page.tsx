@@ -1,7 +1,7 @@
 // ============================================================
 // app/d/keigo/page.tsx — 敬语邮件改写器 ✉️(gsap 档)
 // 草稿 + 场景 → LLM 改写成得体商务日语。prompt 在 demos/keigo/config.ts。
-// 结构:世界观容器 → 表单 → 信笺展开结果(GSAP) → 置灰的坑 → BreakpointCard
+// 结构:世界观容器 → 表单 → 信笺展开结果(GSAP) → 置灰的坑
 // 动效只在结果出现时跑一次:clip-path 揭示 + 轻微纸张摆动 + 朱笔渐显。
 // ============================================================
 "use client";
@@ -10,7 +10,6 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { theme } from "@/demos/keigo/theme";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "keigo")!;
@@ -131,7 +130,7 @@ export default function Page() {
     }`;
 
   return (
-    <main className={`min-h-dvh px-4 pt-10 pb-8 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-10 pb-8 ${theme.page} ${theme.font}`}>
       <div className="max-w-md mx-auto">
         {/* 世界观容器:信笺头,细双线 + 朱色一点 */}
         <header className="mb-7 border-y border-[#221f1a]/70 py-4 relative">
@@ -291,7 +290,6 @@ export default function Page() {
           </section>
         )}
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

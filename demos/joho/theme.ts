@@ -3,7 +3,6 @@
 // 档位:standard。终端 TUI:纯黑底 + 柔化终端绿(#33ff66 调柔),
 // 等宽 Courier、光标闪烁、简报逐条淡入。克制的黑客美学,不加扫描线。
 // ============================================================
-import type { CSSProperties } from "react";
 
 export const theme = {
   page: "bg-black text-[#45e37e]",
@@ -16,9 +15,4 @@ export const theme = {
   faint: "#134d2c",
   /** 报错用的终端红 */
   alert: "#ff6b6b",
-  bpVars: {
-    "--bp-bg": "#04140a",
-    "--bp-fg": "#b9f4d0",
-    "--bp-accent": "#45e37e"
-  } as CSSProperties
 };

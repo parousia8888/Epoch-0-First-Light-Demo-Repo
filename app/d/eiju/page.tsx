@@ -2,14 +2,13 @@
 // app/d/eiju/page.tsx — 永住点数计算器 🧮(样板 demo)
 // 纯前端实时算分,无 LLM。算分规则在 demos/eiju/rules.ts。
 // 这个文件同时是其他 9 个 demo 的结构样板:
-//   世界观容器 → 表单 → 结果 → 置灰的坑 → BreakpointCard
+//   世界观容器 → 表单 → 结果 → 置灰的坑
 // ============================================================
 "use client";
 
 import { useState } from "react";
 import { calcScore, type EijuInput } from "@/demos/eiju/rules";
 import { theme } from "@/demos/eiju/theme";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "eiju")!;
@@ -45,7 +44,7 @@ export default function Page() {
   const goal = r.total >= 80 ? null : r.total >= 70 ? 80 : 70;
 
   return (
-    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`}>
       <div className="max-w-md mx-auto">
         {/* 假 Excel 标题栏,rough 档的世界观 */}
         <div className="border border-black/60 bg-[#dce6f5] px-3 py-1.5 text-[11px] flex justify-between items-center">
@@ -207,7 +206,6 @@ export default function Page() {
           🔒 証明書類チェックリストを生成(未対応)
         </button>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

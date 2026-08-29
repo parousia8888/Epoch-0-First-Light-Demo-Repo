@@ -10,7 +10,6 @@ import { useState } from "react";
 import { theme } from "@/demos/gomi/theme";
 import { useGenerate } from "@/core/useGenerate";
 import { ImageDrop } from "@/core/ImageDrop";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 
 const material = demos.find((d) => d.slug === "gomi")!;
@@ -64,7 +63,7 @@ export default function Page() {
   const { run, loading, text, error } = useGenerate("gomi");
 
   return (
-    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`}>
       {/* 最朴素的 CSS 闪烁,老游戏感,不算动效打磨 */}
       <style>{`@keyframes gomi-blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }`}</style>
 
@@ -146,7 +145,6 @@ export default function Page() {
           </span>
         </div>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

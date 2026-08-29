@@ -30,7 +30,6 @@
 | 想法 | 怎么办 |
 |---|---|
 | 某 demo 配色不对 | `demos/<demo名>/theme.ts` → 颜色都集中在这里 |
-| 桌卡(BreakpointCard)在某页看不清 | 同上文件 → `bpVars` 三个变量:`--bp-bg` 底色 / `--bp-fg` 文字 / `--bp-accent` 强调色 |
 | 动效太吵 / 想关掉 | `app/d/<demo名>/page.tsx` → 搜 `gsap`,把对应 useEffect 整块注释掉,页面不会崩 |
 
 ## 部署向
@@ -44,5 +43,5 @@
 ## 三条铁律(动手前默念)
 
 1. `direction` 字段永远不上页面——它是 host 内参
-2. BreakpointCard 永远三段,不加"下一步"
+2. 坑位文字只印物理桌卡,不上网页——网页里的坑只以置灰交互存在
 3. rough 档的 demo 丑是故意的,不要顺手打磨

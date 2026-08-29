@@ -66,7 +66,7 @@ core/llm.ts → 中转站 /chat/completions(OpenAI-compatible,30s 超时)
 - **无数据库、无登录、无持久化、无流式**。内存限流重启即清零,活动场景足够
 - **prompt 只住在 config.ts**,页面代码里一行 prompt 都没有
 - **visiblePits(置灰坑)是三层真实的**:素材表里声明 → UI 上画出来且禁用 → 后端 locked 403
-- **BreakpointCard(桌卡)固定三段**:灵魂坑 ×1 + 实现坑 ×2 + Epoch 0 徽章。没有"方向/下一步"字段,这是 workshop 纪律——答案留给桌上的人,`direction` 字段永远不上页面
+- **坑位说明不上网页**:灵魂坑和实现坑的文字只印在线下物理桌卡上(数据源 `demos-material.ts`),网页里坑只以真实的置灰交互存在——答案留给桌上的人,`direction` 字段更是永远不上页面
 - 视觉三档:`gsap`(keigo/taishoku/nomikai/roulette,GSAP 非线性动效)/ `standard`(CSS 过渡)/ `rough`(故意糙,不要顺手打磨)
 
 新建 demo:`pnpm new-demo <slug>` 生成三件套,然后去 `core/registry.ts` 登记两行。

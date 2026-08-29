@@ -48,12 +48,6 @@ export const theme = {
   page: "bg-neutral-950 text-neutral-100",
   /* 主字体:font-mincho | font-dot | font-typewriter | font-hand | font-sans */
   font: "font-sans",
-  /* BreakpointCard 三个 CSS 变量 */
-  bpVars: {
-    "--bp-bg": "#111",
-    "--bp-fg": "#eee",
-    "--bp-accent": "#666"
-  } as React.CSSProperties
 };
 `;
 
@@ -61,7 +55,6 @@ const pageTpl = `// app/d/${slug}/page.tsx — ${slug} 的页面
 "use client";
 
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { demos } from "@/demos-material";
 import { theme } from "@/demos/${slug}/theme";
 
@@ -73,7 +66,6 @@ export default function Page() {
   return (
     <main
       className={\`min-h-dvh px-5 pt-10 pb-6 \${theme.page} \${theme.font}\`}
-      style={theme.bpVars}
     >
       <div className="max-w-md mx-auto">
         <h1 className="text-2xl font-bold mb-1">{material.emoji} {material.name}</h1>
@@ -84,7 +76,6 @@ export default function Page() {
         {error && <p className="text-sm mt-4 opacity-80">{error}</p>}
         {text && <pre className="whitespace-pre-wrap text-sm mt-4">{text}</pre>}
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );

@@ -2,14 +2,13 @@
 // app/d/nomikai/page.tsx — 饮み会遁走器 🏮(gsap 档动效担当)
 // 场景 ×3 + 强度滑杆 → LLM 生成三条拒绝话术(带翻车风险)。
 // 核心彩蛋:滑杆拖到 80+ 被 GSAP 物理弹回 79(まだ早い)。
-// 结构:世界观容器 → 表单 → 结果 → 置灰的坑 → BreakpointCard
+// 结构:世界观容器 → 表单 → 结果 → 置灰的坑
 // ============================================================
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGenerate } from "@/core/useGenerate";
-import { BreakpointCard } from "@/core/BreakpointCard";
 import { theme } from "@/demos/nomikai/theme";
 import { demos } from "@/demos-material";
 
@@ -147,7 +146,7 @@ export default function Page() {
     intensity <= 30 ? "また今度…(委婉含糊)" : intensity <= 60 ? "ちょっと今日は(明确但客气)" : "帰ります(直接坚定)";
 
   return (
-    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`} style={theme.bpVars}>
+    <main className={`min-h-dvh px-4 pt-8 pb-6 ${theme.page} ${theme.font}`}>
       {/* 滑杆的居酒屋质感:暖黄轨道 + 80-100 的封条区 */}
       <style>{`
         .nomikai-range {
@@ -317,7 +316,6 @@ export default function Page() {
           🔒 既読スルー生成(未開放)
         </button>
 
-        <BreakpointCard soulPit={material.soulPit} visiblePits={material.visiblePits} />
       </div>
     </main>
   );
