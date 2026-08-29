@@ -1,5 +1,10 @@
 # 提案:epoch0 MCP 加一个 workshop 工具
 
+> ✅ **已实现(2026-08-30)**:平台仓库里落地为 `get_event_kit` 工具 + Event 表的
+> `kit` JSON 字段 + 活动后台的「Workshop 带走包」表单。窗口取「开场前 24h ~ 散场后
+> 7d」,多场命中时列出让 agent 与用户确认;`list_events` 顺手改成 ISO 时间并给带
+> kit 的活动标 🎒。下面保留原始提案作为设计记录。
+
 > 这是给 epoch0.tokyo MCP 服务器(另一个代码库)的功能提案,不是本仓库的代码。
 > 目标体验:参与者对装了 epoch0 MCP 的 Claude 说「我在参加活动,帮我装 workshop
 > 的项目」,Claude 一条链路走完:找到活动 → 找到项目 → 装好环境。
