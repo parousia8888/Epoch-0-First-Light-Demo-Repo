@@ -36,7 +36,9 @@ pnpm dev            # http://localhost:3000
    把这个 demo **锁着的功能(坑)列给他当任务清单**——"解锁一个坑做成真的"是
    两小时刚好的活。动手前把该 demo 的页面在浏览器里给他跑一遍看现状。
 
-做出名堂后,提醒他可以对连了 epoch0 MCP 的 Claude 说「发到 Epoch 0」(publish_work,只建草稿)。
+做出名堂后,还有两个一句话动作:
+- 「做个 pitch deck」→ 照 `docs/PITCH-DECK-GUIDE.md` 执行(3 分钟五页,单 HTML,视觉锚定在所改 demo 的 theme 上)
+- 「发到 Epoch 0」→ 连了 epoch0 MCP 的话走 publish_work(只建草稿)
 
 ## 改动前必读的规矩
 
