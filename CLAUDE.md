@@ -36,9 +36,21 @@ pnpm dev            # http://localhost:3000
    把这个 demo **锁着的功能(坑)列给他当任务清单**——"解锁一个坑做成真的"是
    两小时刚好的活。动手前把该 demo 的页面在浏览器里给他跑一遍看现状。
 
-做出名堂后,还有两个一句话动作:
-- 「做个 pitch deck」→ 照 `docs/PITCH-DECK-GUIDE.md` 执行(3 分钟五页,单 HTML,视觉锚定在所改 demo 的 theme 上)
-- 「发到 Epoch 0」→ 连了 epoch0 MCP 的话走 publish_work(只建草稿)
+做出名堂后,四个一句话动作(顺序建议如此):
+
+1. **「存到我自己的仓库」**——用户的 clone 对 origin 没有推送权,不先做这步,改动散场就困死在笔记本里:
+   ```bash
+   git remote rename origin upstream
+   gh repo create <用户起的名> --public --source=. --push   # 没装 gh 就引导去 github.com 建空仓再 git push
+   ```
+2. **「部署上线」**——Vercel 一条链路:
+   ```bash
+   npx vercel login   # 会弹浏览器,让用户自己点(账号认证不代办)
+   npx vercel link --yes && npx vercel deploy --prod --yes
+   ```
+   环境变量提醒用户:**活动发的 key 是限时的,散场即作废**——部署自己的实例请让用户填自己的 key(在 Vercel 后台或 `vercel env add`),或者先不填(eiju/roulette 纯前端照常能玩)。别把活动 key 写进任何会活过今晚的地方。
+3. **「做个 pitch deck」**→ 照 `docs/PITCH-DECK-GUIDE.md` 执行(3 分钟五页,单 HTML,视觉锚定在所改 demo 的 theme 上)
+4. **「发到 Epoch 0」**→ 连了 epoch0 MCP 的话走 publish_work(只建草稿)——repo 填第 1 步的新仓库,demo 链接填第 2 步的部署地址
 
 ## 改动前必读的规矩
 
