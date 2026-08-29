@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局基线:手机优先,demo 页面各自的世界观在自己的 page/theme 里定义 */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-neutral-950 text-neutral-100 antialiased;
+}
+
+/* 置灰的坑位控件统一手感:半透明 + 禁用光标 + 不可选中 */
+.pit-locked {
+  @apply opacity-40 cursor-not-allowed select-none;
+}
