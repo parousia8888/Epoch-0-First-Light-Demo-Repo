@@ -1,0 +1,24 @@
+// ============================================================
+// demos/joho/theme.ts — 在日 AI 情报官的视觉人格
+// 档位:standard。终端 TUI:纯黑底 + 柔化终端绿(#33ff66 调柔),
+// 等宽 Courier、光标闪烁、简报逐条淡入。克制的黑客美学,不加扫描线。
+// ============================================================
+import type { CSSProperties } from "react";
+
+export const theme = {
+  page: "bg-black text-[#45e37e]",
+  font: "font-typewriter",
+  /** 终端绿(主亮色) */
+  accent: "#45e37e",
+  /** 暗绿(次要文字/提示) */
+  dim: "#1f9a54",
+  /** 深绿(边框/分隔线) */
+  faint: "#134d2c",
+  /** 报错用的终端红 */
+  alert: "#ff6b6b",
+  bpVars: {
+    "--bp-bg": "#04140a",
+    "--bp-fg": "#b9f4d0",
+    "--bp-accent": "#45e37e"
+  } as CSSProperties
+};
