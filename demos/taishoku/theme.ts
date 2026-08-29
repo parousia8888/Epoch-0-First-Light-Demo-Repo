@@ -1,0 +1,22 @@
+// ============================================================
+// demos/taishoku/theme.ts — 辞职代行 AI 🕊 的视觉人格
+// 档位:gsap(全场最重的一桌)。纯黑底、骨白文字、印章朱红点缀,
+// 明朝体(Shippori Mincho),像一份重要文书。庄重到近乎戏剧。
+// ============================================================
+import type { CSSProperties } from "react";
+
+export const theme = {
+  page: "bg-black text-[#e9e4d8]",
+  font: "font-mincho",
+  /** 印章朱红 */
+  accent: "#c73e3a",
+  /** 骨白 */
+  bone: "#e9e4d8",
+  /** 退職届白纸的底色(微微泛黄的和纸感) */
+  paper: "#f5f1e8",
+  bpVars: {
+    "--bp-bg": "#0a0a0a",
+    "--bp-fg": "#e9e4d8",
+    "--bp-accent": "#c73e3a"
+  } as CSSProperties
+};
