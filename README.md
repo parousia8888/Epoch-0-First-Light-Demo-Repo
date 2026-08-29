@@ -4,15 +4,30 @@
 
 活动:First Light Vol.1 · 2026.08.30(日)13:30–17:00 @ Thyme 赤坂
 
-## 30 秒跑起来
+## 三种带走方式(按动手程度选一个)
+
+**层 0 · 只想玩**:什么都不用装,扫活动现场的二维码,或直接访问线上站。
+
+**层 1 · 想要一个自己的**(不用碰终端):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparousia8888%2FEpoch-0-First-Light-Demo-Repo&env=LLM_BASE_URL,LLM_API_KEY,EVENT_MODE&envDescription=OpenAI-compatible%20%E4%B8%AD%E8%BD%AC%E7%AB%99%E5%9C%B0%E5%9D%80%E4%B8%8E%E5%AF%86%E9%92%A5%EF%BC%9BEVENT_MODE%3Dtrue%20%E5%BC%80%E5%90%AF%E6%8B%8D%E7%85%A7%E7%B1%BB%20demo)
+
+点上面的按钮 → Vercel 自动帮你 fork + 部署 → 网页表单里填 3 个环境变量(任何 OpenAI-compatible 服务的地址和 key,`EVENT_MODE` 填 `true`)。没有 key 也可以先部署:eiju(算分器)和 roulette(老虎机)是纯前端,零配置可玩。
+
+**层 2 · 想改代码**:
 
 ```bash
-pnpm install
-cp .env.example .env.local   # 填入中转站地址和密钥
-pnpm dev
+git clone https://github.com/parousia8888/Epoch-0-First-Light-Demo-Repo.git
+cd Epoch-0-First-Light-Demo-Repo
+pnpm install && pnpm setup   # setup 会生成 .env.local 并告诉你填什么
+pnpm dev                     # http://localhost:3000
 ```
 
-打开 http://localhost:3000 就是 10 个 demo 的索引页。手机扫码用的就是这个站。
+**🤖 或者让你的 AI 助手来**:仓库根目录有 [CLAUDE.md](CLAUDE.md),Claude Code / Cursor 等 agent 进来会自动读懂项目规矩。对它说一句就够:
+
+> 帮我把这个 workshop 项目跑起来,然后带我看看 keigo 这个 demo 是怎么工作的
+
+装了 Epoch 0 MCP 的话更省:让它查正在进行的活动(`list_events`),活动页里就有本仓库链接。
 
 ## 我不写代码,只想改产品(文案 / prompt / 坑位)
 

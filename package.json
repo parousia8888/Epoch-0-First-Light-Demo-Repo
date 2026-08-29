@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "new-demo": "tsx scripts/new-demo.ts"
+    "new-demo": "tsx scripts/new-demo.ts",
+    "setup": "node scripts/setup.mjs"
   },
   "dependencies": {
     "gsap": "^3.12.5",

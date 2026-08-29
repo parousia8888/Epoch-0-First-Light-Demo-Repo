@@ -9,9 +9,11 @@ import { registry } from "@/core/registry";
 import { generate } from "@/core/llm";
 
 // 内存限流:重启即清零,活动场景够用(无数据库是纪律)
+// 60/分钟:会场 Wi-Fi 下全场手机共享一个出口 IP,20 会误伤全房间;
+// 60 依然挡得住单人狂刷,挡不住的那种人现场直接没收手机。
 const hits = new Map<string, number[]>();
 const WINDOW_MS = 60_000;
-const LIMIT = 20;
+const LIMIT = 60;
 
 function rateLimited(ip: string): boolean {
   const now = Date.now();
