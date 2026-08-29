@@ -15,7 +15,7 @@ export const nomikaiConfig: DemoConfig = {
   slug: "nomikai",
   name: "饮み会遁走器",
   model: "gpt-4o-mini",
-  maxTokens: 700,
+  maxTokens: 1400,
   temperature: 0.9,
   actions: {
     excuse: {

@@ -9,7 +9,7 @@ export const taishokuConfig: DemoConfig = {
   slug: "taishoku",
   name: "辞职代行 AI",
   model: "gpt-4o-mini",
-  maxTokens: 1000,
+  maxTokens: 2200,
   temperature: 0.4,
   actions: {
     generate: {

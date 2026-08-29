@@ -9,7 +9,7 @@ export const yakushoConfig: DemoConfig = {
   name: "市役所文件解读器",
   model: "gpt-4o-mini",
   vision: true,
-  maxTokens: 700,
+  maxTokens: 1400,
   temperature: 0.3,
   actions: {
     read: {

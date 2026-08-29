@@ -5,6 +5,9 @@
 // 页面永远不直连中转站,密钥只活在服务端。
 // ============================================================
 import { NextRequest, NextResponse } from "next/server";
+
+// Vercel 函数最长执行时间:Hobby 默认 10s 会杀掉慢一点的生成,显式放宽到 60s
+export const maxDuration = 60;
 import { registry } from "@/core/registry";
 import { generate } from "@/core/llm";
 

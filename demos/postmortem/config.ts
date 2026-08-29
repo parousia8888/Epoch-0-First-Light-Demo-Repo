@@ -8,7 +8,7 @@ export const postmortemConfig: DemoConfig = {
   slug: "postmortem",
   name: "个人项目验尸官",
   model: "gpt-4o-mini",
-  maxTokens: 900,
+  maxTokens: 1800,
   temperature: 0.5,
   actions: {
     autopsy: {

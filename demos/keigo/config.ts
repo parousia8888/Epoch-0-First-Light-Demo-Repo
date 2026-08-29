@@ -15,7 +15,7 @@ export const keigoConfig: DemoConfig = {
   slug: "keigo",
   name: "敬语邮件改写器",
   model: "gpt-4o-mini",
-  maxTokens: 900,
+  maxTokens: 1800,
   temperature: 0.6,
   actions: {
     rewrite: {

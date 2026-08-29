@@ -8,7 +8,7 @@ export const chintaiConfig: DemoConfig = {
   slug: "chintai",
   name: "找房初期费用拆解器",
   model: "gpt-4o-mini",
-  maxTokens: 900,
+  maxTokens: 1800,
   temperature: 0.3,
   actions: {
     analyze: {

@@ -10,7 +10,7 @@ export const gomiConfig: DemoConfig = {
   name: "垃圾分类相机",
   model: "gpt-4o-mini",
   vision: true,
-  maxTokens: 600,
+  maxTokens: 1200,
   temperature: 0.3,
   actions: {
     classify: {

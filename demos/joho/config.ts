@@ -44,7 +44,7 @@ export const johoConfig: DemoConfig = {
   slug: "joho",
   name: "在日 AI 情报官",
   model: "gpt-4o-mini",
-  maxTokens: 700,
+  maxTokens: 1400,
   temperature: 0.4,
   actions: {
     brief: {
